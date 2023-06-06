@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Album Tracks</title>
+  <link rel="stylesheet" type="text/css" href="../styles/style_track.css">
+</head>
+<body>
+  <h2>Tracks</h2>
+  <ul class="track-list">
+    {{#each tracks}}
+      <li class="track-item">
+        <h3>{{name}}</h3>
+        <audio controls class="audio-player">
+          <source src="{{preview_url}}" type="audio/mpeg">
+          Your browser does not support the audio element.
+        </audio>
+      </li>
+    {{else}}
+      <p>No tracks found.</p>
+    {{/each}}
+  </ul>
+</body>
+</html>
+

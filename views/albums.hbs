@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Artist Albums</title>
+  <link rel="stylesheet" type="text/css" href="../styles/style_artist_search.css">
+</head>
+<body>
+  <h2>Albums</h2>
+  {{#each albums}}
+    <div>
+      <h3>{{name}}</h3>
+      {{#if images.length}}
+        <img src="{{images.[0].url}}" alt="Album Cover" />
+      {{else}}
+        <p>No image available</p>
+      {{/if}}
+      <a href="/tracks/{{id}}">View Tracks</a>
+    </div>
+  {{else}}
+    <p>No albums found.</p>
+  {{/each}}
+</body>
+</html>
